@@ -17,7 +17,7 @@ setup(
     packages=["woothook"],
     license="Cooperative Non-Violent Public License v7 or later (CNPLv7+)",
     project_urls={
-        "Bug Tracker": "https://github.com/dearkafka/woot-service/issues",
+        "Bug Tracker": "https://github.com/dearkafka/woothook/issues",
     },
     classifiers=[
         "Programming Language :: Python :: 3.6",
