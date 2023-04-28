@@ -7,7 +7,7 @@ It listens for Chatwoot events (specified in Chatwoot >> Integrations >> Webhook
 However, you are free to use it as an example and template for adding any Chatwoot API related functionality, like connecting Google Spreadsheets, Airtable, etc.
 
 
-All you need is this
+All you need is populate config file with your data (see [example.config](./example.config)) and do this:
 
 ```
 woothook CONFIG_FILENAME
