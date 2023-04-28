@@ -1,4 +1,4 @@
-# woothook - Chatwoot webhook server using woot package
+# woothook - Chatwoot webhook server using woot.
 
 Example project can be used as a template for Chatwoot webhook server that performs via Chatwoot API ([woot](https://github.com/dearkafka/woot) package).
 
