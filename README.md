@@ -6,4 +6,11 @@ It listens for Chatwoot events (specified in Chatwoot >> Integrations >> Webhook
 
 However, you are free to use it as an example and template for adding any Chatwoot API related functionality, like connecting Google Spreadsheets, Airtable, etc.
 
+
+All you need is this
+
+```
+woothook CONFIG_FILENAME
+```
+
 Also it has docker support so you can build it and include into yours docker-compose file.
