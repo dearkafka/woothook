@@ -20,7 +20,7 @@ class WootHook:
         self.port = self.config.service.port
         self.host = self.config.service.host
 
-        async def message_handler(request):
+        async def message_handler(request: Dict):
             await self.process_message(request)
             return Response(status_code=status.HTTP_204_NO_CONTENT)
 
@@ -29,6 +29,25 @@ class WootHook:
 
     async def process_message(self, request: Dict):
         # TODO: Implement your own logic here
+        conversation = request.get("conversation")
+        if conversation:
+            channel = conversation.get("channel")
+            if channel == "Channel::Telegram":
+                if not ((conversation.get("meta")).get("sender")).get(
+                    "custom_attributes"
+                ):
+                    await self.chatwoot.contacts.update(
+                        account_id=self.config.chatwoot.account_id,
+                        id=(conversation.get("contact_inbox")).get("contact_id"),
+                        custom_attributes={
+                            "telegram": (
+                                ((conversation.get("meta")).get("sender")).get(
+                                    "additional_attributes"
+                                )
+                            ).get("username")
+                        },
+                    )
+                    print("Contact updated")
         print(request)
 
 
