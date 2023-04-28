@@ -29,5 +29,10 @@ setup(
     ],
     include_package_data=True,
     python_requires=">=3.6",
-    install_requires=["requests>=2.27.1", "woot>=0.0.1", "fastapi", "uvicorn"],
+    install_requires=["requests>=2.27.1", "woot>=0.0.1", "typer", "fastapi", "uvicorn"],
+    entry_points={  # Optional
+        "console_scripts": [
+            "woothook=woothook.service:app",
+        ],
+    },
 )
