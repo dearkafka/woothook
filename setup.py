@@ -29,6 +29,7 @@ setup(
     ],
     include_package_data=True,
     python_requires=">=3.6",
+    dependency_links=["git+https://github.com/dearkafka/woot#egg=woot"],
     install_requires=["requests>=2.27.1", "woot>=0.0.1", "typer", "fastapi", "uvicorn"],
     entry_points={  # Optional
         "console_scripts": [
