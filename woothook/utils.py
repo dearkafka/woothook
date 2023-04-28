@@ -26,5 +26,8 @@ def load_config(config_file: str) -> dotdict:
                     dot_config[section][key] = int(value)
                 if key == "inbox_id":
                     dot_config[section][key] = int(value)
+            if section == "service":
+                if key == "port":
+                    dot_config[section][key] = int(value)
 
     return dot_config

@@ -20,7 +20,7 @@ class WootHook:
         self.port = self.config.service.port
         self.host = self.config.service.host
 
-        async def message_handler(self, request):
+        async def message_handler(request):
             await self.process_message(request)
             return Response(status_code=status.HTTP_204_NO_CONTENT)
 
