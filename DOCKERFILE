@@ -4,6 +4,9 @@ WORKDIR /app
 
 COPY . /app
 
-RUN pip install .
+RUN apt-get update && apt-get install -y git \
+    && pip install .
 
-CMD ["woothook", "start", "/app/config.yaml"]
+ENTRYPOINT ["woothook"]
+
+CMD ["example.config"]
